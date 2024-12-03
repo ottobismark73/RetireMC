@@ -297,5 +297,5 @@ allocations = [0.60, 0.25, 0.15]  # Corrisponde all'ordine degli ETF
 
 ## Avvio del Programma
 ```bash
-python sim_12.py
+python sim_11.py
 ```

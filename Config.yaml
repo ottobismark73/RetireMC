@@ -1,0 +1,48 @@
+# Durata delle fasi (in anni)
+accumulation_years: 10      # Anni di accumulo
+maintenance_years: 4        # Anni di mantenimento
+withdrawal_years: 26        # Anni di prelievo
+
+# Importi annuali (in euro)
+investment_amount: 20000    # Quanto investi ogni anno
+maintenance_withdrawal: 25000  # Quanto prelevi durante la fase di mantenimento
+withdrawal_amount: 30000    # Quanto vuoi prelevare ogni anno durante il decumulo
+mandatory_pension: 25000    # Pensione obbligatoria al netto delle tasse
+complementary_pension: 5000 # Pensione complementare al netto delle tasse
+
+# Resto del file rimane invariato
+mean_return: 6.91          # Rendimento medio atteso
+std_dev_return: 14.79      # Volatilità (deviazione standard)
+inflation_rate: 3          # Tasso di inflazione
+
+# Parametri cigno nero
+black_swan_probability: 2.5   # Probabilità annua di un cigno nero (%)
+black_swan_impact: -45        # Impatto percentuale sul portafoglio
+
+# Parametri tecnici
+batch_size: 1000             # Dimensione dei batch per le simulazioni
+
+# Parametri per l'analisi di rischio
+risk_free_rate: 0.02         # Tasso privo di rischio
+confidence_level: 0.95       # Livello di confidenza per VaR e CVaR
+drawdown_threshold: 0.10     # Soglia per considerare un drawdown significativo
+
+# Parametri stress test
+high_inflation_scenario: 8.0    # Scenario alta inflazione (%)
+market_crash_impact: -40.0      # Impatto crash di mercato (%)
+bear_market_years: 5            # Durata scenario bear market prolungato
+combined_stress_impact: -50.0   # Impatto scenario combinato (%)
+
+# Parametri visualizzazione
+plot_height: 800              # Altezza dei grafici interattivi
+plot_width: 1200             # Larghezza dei grafici interattivi
+distribution_bins: 50         # Numero di bin per gli istogrammi
+
+# Parametri di esecuzione
+execution_settings:
+  debug_mode: false                # Modalità debug per esecuzione sequenziale
+  parallel_execution:
+    enabled: true                  # Abilita/disabilita multiprocessing
+    max_cores: "auto"             # "auto" o numero intero
+    chunk_size: 100               # Numero di simulazioni per chunk
+    memory_limit_mb: 1024         # Limite di memoria per processo in MB
